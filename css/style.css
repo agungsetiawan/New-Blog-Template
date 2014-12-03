@@ -10,13 +10,28 @@ h1{
 	font-size: 18px;
 }
 
+h1.title{
+	font-size: 36px;
+	color: #fff;
+}
+
 a{
 	text-decoration: none;
 	color: #e9932c;
 }
 
+p{
+	margin-bottom: 25px;
+}
+
 .white-text{
 	color: #fff;
+}
+
+.comment-link{
+	background: #e2842c;
+	color: #fff;
+	padding: 10px;
 }
 
 #top-header{
@@ -86,14 +101,79 @@ a{
 	padding: 5px 10px;
 }
 
+.title{
+	background: #5b2d26;
+	padding: 20px 0;
+}
+
+.inner-title{
+	width: 768px;
+	margin: 0 auto;
+}
+
+.meta{
+	background: #83382b;
+	padding: 10px 0;
+}
+
+.inner-meta{
+	width: 768px;
+	margin: 0 auto;
+}
+
+.inner-meta span{
+	margin-right: 10px;
+}
+
+.content{
+	width: 1000px;
+	margin: 0 auto;
+	border-left: 1px solid #F8F1EB;
+	border-right: 1px solid #F8F1EB;
+}
+
+.inner-content{
+	width: 768px;
+	margin: 0 auto;
+	padding: 30px 0 10px;
+}
+
+.author-area{
+	background: #f6f6ea;
+}
+
+.inner-author-area{
+	width: 768px;
+	margin: 0 auto;
+	padding: 20px 0;
+}
+
 
 @media screen and (max-width: 1000px){
-	#my-name, #menu,#browse-by,#search{
+	#my-name, #menu,#browse-by,#search,.title{
 		float: none;
 		text-align: center;
 	}
 
-	#inner-top-header,#inner-bottom-header{
+	#inner-top-header,#inner-bottom-header, .inner-title, .inner-meta, .inner-content,.content{
 		width: 100%;
 	}
+
+	h1.title{
+		font-size: 28px;
+	}
+
+	.inner-meta,.inner-content,.content{
+		padding: 0px 10px;
+	}
+
+	.inner-author-area{
+		padding: 20px 10px;
+	}
+
+	#category-tag{
+		display: block;
+		margin-top: 10px;
+	}
+
 }
