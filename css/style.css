@@ -1,0 +1,99 @@
+*{
+	margin:0px;
+	padding: 0px;
+	color: #5b5e5b;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+h1{
+	font-size: 18px;
+}
+
+a{
+	text-decoration: none;
+	color: #e9932c;
+}
+
+.white-text{
+	color: #fff;
+}
+
+#top-header{
+	background: #f6f5e9;
+}
+
+#inner-top-header{
+	width: 1000px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 17px 0;
+	background : transparent url('img/bg-line.png') repeat center top
+}
+
+#my-name{
+	float: left;
+}
+
+#menu{
+	float: right;
+}
+
+#menu a{
+	margin-left: 15px;
+	vertical-align: middle;
+	color: #5b5e5b;
+}
+
+#menu a.active{
+	color: #e9932c;
+	font-weight: bold;
+}
+
+#bottom-header{
+	background: #291f16;
+	padding: 10px 0;
+}
+
+#inner-bottom-header{
+	width: 768px;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+#browse-by{
+	float: left;
+	vertical-align: middle;
+}
+
+#search{
+	float: right;
+}
+
+#search-box{
+	padding: 5px;
+	font-size: 14px;
+	height: 12px;
+	width: 220px;
+	background: #f6f5ea;
+	border: none;
+}
+
+#search-button{
+	color: #fff;
+	background: #83382b;
+	border: none;
+	padding: 5px 10px;
+}
+
+
+@media screen and (max-width: 1000px){
+	#my-name, #menu,#browse-by,#search{
+		float: none;
+		text-align: center;
+	}
+
+	#inner-top-header,#inner-bottom-header{
+		width: 100%;
+	}
+}
