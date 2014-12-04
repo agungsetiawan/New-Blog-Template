@@ -43,7 +43,6 @@ p{
 	margin: 0 auto;
 	overflow: auto;
 	padding: 17px 0;
-	background : transparent url('img/bg-line.png') repeat center top
 }
 
 #my-name{
@@ -123,6 +122,7 @@ p{
 
 .inner-meta span{
 	margin-right: 10px;
+	font-size: 12px;
 }
 
 .content{
@@ -148,6 +148,37 @@ p{
 	padding: 20px 0;
 }
 
+h3.about-me{
+	margin-bottom: 15px;
+}
+
+#author-area > div{
+	display: inline-block;
+}
+
+#my-avatar{
+	width: 100px;
+	margin-right: 20px;
+}
+
+#my-line{
+	vertical-align: top;
+	width: 400px;
+}
+
+#empty-space{
+	height: 25px;
+}
+
+#comment-and-share{
+	background: #5b2d26;
+}
+
+#inner-comment-and-share{
+	width: 768px;
+	margin: 0 auto;
+	padding: 10px 0;
+}
 
 @media screen and (max-width: 1000px){
 	#my-name, #menu,#browse-by,#search,.title{
@@ -155,16 +186,28 @@ p{
 		text-align: center;
 	}
 
-	#inner-top-header,#inner-bottom-header, .inner-title, .inner-meta, .inner-content,.content{
-		width: 100%;
+	#inner-top-header,#inner-bottom-header, .inner-title, .inner-meta, .inner-content, .inner-author-area, #inner-comment-and-share{
+		width: auto;
+	}
+
+	.content{
+		width: auto;
+	}
+
+	#my-line{
+		width: 50%;
 	}
 
 	h1.title{
 		font-size: 28px;
 	}
 
-	.inner-meta,.inner-content,.content{
+	.inner-meta, .content{
 		padding: 0px 10px;
+	}
+
+	.inner-content{
+		padding: 30px 5px 10px;
 	}
 
 	.inner-author-area{
