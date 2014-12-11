@@ -48,7 +48,7 @@
 	<div id="main">
 		<div class="title">
 			<div class="inner-title">
-				<h1 class="title">OmniSharp - Making cross-platform .NET a reality, and a pleasure</h1>
+				<h1 class="title">Implementasi Nyata Singleton Pattern</h1>
 			</div>
 		</div>
 
@@ -62,39 +62,33 @@
 
 		<div class="content">
 			<div class="inner-content">
-				<p>There has been a <strong>LOT</strong> of confusion around Windows, SSDs (hard drives), and whether or not they are getting automatically defragmented by automatic maintenance tasks in Windows..</p>
+				<p>Pada tulisan <strong>sebelumnya</strong> (Berkenalan dengan Singleton Pattern) kita sudah mengetahui apa itu singleton pattern dan juga belajar menuangkannya menggunakan kode bahasa pemrograman C#. Pada bagian ini kita bersama-sama akan belajar implementasi nyata dari pattern singleton.</p>
 
-				<p>There's a general rule of thumb or statement that "defragging an SSD is always a bad idea." I think we can agree we've all heard this before. We've all been told that SSDs don't last forever and when they die, they just poof and die. SSDs can only handle a finite number of writes before things start going bad. This is of course true of regular spinning rust hard drives, but the conventional wisdom around <a href="">SSDs</a> is to avoid writes that are perceived as unnecessary..</p>
+				<p>Di akhir artikel <a href="#">sebelumnya</a> saya melontarkan pertanyaan sepert ini <strong>"Kenapa sebuah kelas perlu hanya boleh memiliki satu instance?"</strong></p>
 
 				<blockquote>
-					<p>I just noticed that the defragsvc is hammering the internal disk on my machine.  To my understanding defrag provides no value add on an SSD and so is disabled by default when the installer determines the disk is SSD.  I was thinking it could be TRIM working, but I thought that was internal to the SSD and so the OS wouldn’t even see the IO.</p>
+					<p>Salah satu jawaban dari pertanyaan tersebut adalah pada kasus aplikasi yang menggunakan MDI (multiple document interface).</p>
 				</blockquote>
 
 				<pre><code>
-public class Good {
-
-    public String index() {
-        return "Index";
+public partial class FormChild : Form
+{
+    private static FormChild instance;
+    private FormChild()
+    {
+        InitializeComponent();
     }
-
-    public String index() {
-        return "Index";
+ 
+    public static FormChild GetInstance()
+    {
+        if(instance==null || instance.IsDisposed)
+        {
+            instance = new FormChild();
+        }
+ 
+        return instance;
     }
-
-    public String index() {
-        return "Index";
-    }
-
-    public String index() {
-        return "Index";
-    }
-
-    public String index() {
-        return "Index";
-    }
-
-}
-				</code></pre>
+}				</code></pre>
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
