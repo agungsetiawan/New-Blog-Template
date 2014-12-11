@@ -59,7 +59,7 @@ ul li{
 .comment-link{
 	background: #e2842c;
 	color: #fff;
-	padding: 10px;
+	padding: 12px 10px 10px;
 }
 
 #top-header{
@@ -200,6 +200,7 @@ h3.about-me{
 
 #comment-and-share{
 	background: #5b2d26;
+	padding-top: 2px;
 }
 
 #inner-comment-and-share{
